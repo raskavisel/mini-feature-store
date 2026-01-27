@@ -2,18 +2,22 @@
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, Session
-from models import Feature
 
 DATABASE_URL = "sqlite:///features.db"
 
-engine = create_engine(DATABASE_URL, echo=True)  # echo=True shows SQL queries
+engine = create_engine(DATABASE_URL, echo=True)
 SessionLocal = sessionmaker(bind=engine)
 Base = declarative_base()
+
+def connect_db():
+    print("Database connected successfully")
+
+# Import models here, AFTER Base is created
+from models import Feature
 
 # Create tables
 Base.metadata.create_all(bind=engine)
 
-# Function to add a feature
 def add_feature(entity_id, feature_name, value, version="1"):
     db: Session = SessionLocal()
     feature = Feature(
@@ -27,7 +31,6 @@ def add_feature(entity_id, feature_name, value, version="1"):
     db.close()
     print(f"Feature '{feature_name}' added for entity '{entity_id}' version {version}")
 
-# Function to get a feature (latest version by default)
 def get_feature(entity_id, feature_name, version=None):
     db: Session = SessionLocal()
     query = db.query(Feature).filter(Feature.entity_id==entity_id, Feature.feature_name==feature_name)
@@ -39,7 +42,3 @@ def get_feature(entity_id, feature_name, version=None):
         return result.value
     else:
         return None
-
-def connect_db():
-    # Just to show database connection works
-    print("Database connected successfully")
