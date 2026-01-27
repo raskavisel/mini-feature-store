@@ -4,7 +4,7 @@ Mini Feature Store for Machine Learning Pipelines:
 This is a lightweight, production-ready feature store for machine learning pipelines. It allows you to store, version, and retrieve features efficiently, supporting both training and inference workflows.
 Feature stores are a core component of ML infrastructure at companies like Uber, Airbnb, and Netflix. This project demonstrates the core principles in a simplified, scalable implementation, suitable for desktop and mobile environments.
 
-🛠 Features
+🛠 Features:
 Feature Storage: Save features for multiple entities in a structured database
 Versioning: Track multiple versions of a feature for reproducibility
 Feature Retrieval: Fetch the latest or specific version of a feature
@@ -21,7 +21,7 @@ mini-feature-store/
 
 ⚡ How to Run
 
-Requirements
+Requirements:
 Python 3.x (desktop or mobile)
 SQLAlchemy (pip install sqlalchemy)
 
@@ -62,7 +62,7 @@ age_v1 = database.get_feature("user_1", "age", version="1")
 income = database.get_feature("user_1", "income")
 
 
-🔗 Future Improvements
+🔗 Future Improvements:
 Add a FastAPI interface to serve features via REST API
 Implement caching for faster retrieval
 Support multiple database backends like PostgreSQL or MySQL
