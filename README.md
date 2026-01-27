@@ -68,7 +68,7 @@ Implement caching for faster retrieval
 Support multiple database backends like PostgreSQL or MySQL
 Integrate feature transformation pipelines for ML preprocessing
 
-👩‍💻 Author
+👩‍💻 Author:
 Rasoolbi S
 
 
