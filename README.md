@@ -27,7 +27,7 @@ SQLAlchemy (pip install sqlalchemy)
 
 Run Instructions:
 Clone the repository:
-git clone https://github.com/yourusername/mini-feature-store.git
+git clone https://github.com/raskavisel/mini-feature-store.git
 cd mini-feature-store
 
 Install dependencies:
