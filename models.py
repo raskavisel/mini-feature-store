@@ -7,5 +7,5 @@ class Feature(Base):
     id = Column(Integer, primary_key=True)
     entity_id = Column(String)
     feature_name = Column(String)
-    version = Column(String)
+    version = Column(Integer)
     value = Column(Float)
