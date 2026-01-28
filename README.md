@@ -1,7 +1,7 @@
 Mini Feature Store for Machine Learning Pipelines:
 
 🚀 Project Overview:
-This is a lightweight, production-ready feature store for machine learning pipelines. It allows you to store, version, and retrieve features efficiently, supporting both training and inference workflows.
+This is a lightweight, production-inspired lightweight feature store for machine learning pipelines. It allows you to store, version, and retrieve features efficiently, supporting both training and inference workflows.
 Feature stores are a core component of ML infrastructure at companies like Uber, Airbnb, and Netflix. This project demonstrates the core principles in a simplified, scalable implementation, suitable for desktop and mobile environments.
 
 🛠 Features:
